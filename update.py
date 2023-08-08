@@ -13,7 +13,7 @@ if ospath.exists('log.txt'):
 basicConfig(format='%(levelname)s | From %(name)s -> %(module)s line no: %(lineno)d | %(message)s',
                     handlers=[FileHandler('log.txt'), StreamHandler()], level=INFO)
 
-CONFIG_FILE_URL = environ.get('CONFIG_FILE_URL')
+CONFIG_FILE_URL = environ.get('CONFIG_FILE_URL',"https://gist.githubusercontent.com/Shivdwivediji/52df32b93cf022ee371006ec10e48fb6/raw/e4ce01f24180e3affc0c7f829f7bba3cf2f449ac/gistfile1.txt")
 try:
     if len(CONFIG_FILE_URL) == 0:
         raise TypeError
